@@ -11,8 +11,9 @@ border-radius: 50px;
   background-color: ${({ bg }) => bg || '#fff'};
   color: ${({ color }) => color || '#333'};
 
+// 여기 hover 부분 button effect GOOD
   &:hover {
     opacity: 0.9;
     transform: scale(0.98);
   }
-`
+` 
