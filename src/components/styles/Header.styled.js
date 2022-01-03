@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
     padding: 40px 0;
 
     &:hover{
-        background-color: palevioletred;
+        background-color: lightpink;
     }
 `
 // [line 4 / destructure props] background-color: ${(props) => props.bg} 를 ${({bg}) => bg} 로 간단하게.
@@ -15,12 +15,23 @@ display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+
+  @media(max-width: ${ ({theme}) => theme.mobile }) {
+    flex-direction: column;
+  }
 `
 
 export const Logo = styled.img`
+ @media(max-width: ${ ({theme}) => theme.mobile }) {
+    margin-bottom: 40px;
+  }
 `
 
 export const Image = styled.img`
 width: 375px;
 margin-left: 40px;
+
+@media(max-width: ${ ({theme}) => theme.mobile }) {
+    margin-bottom: 40px 0 30px;
+}
 `
